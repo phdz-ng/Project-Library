@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding:0;
+
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #f4f2e9;
+    text-align: center;
+    color: #181818;
+    font-size: 1.25rem;
+    padding: 30px;
+
+
+}
+
+.container {
+    background-color:#faf8f6;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    .book-card {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 20px;
+        background-color: #f4f2e9;
+        padding: 20px;
+        border-radius: 15px;
+        border: none;
+        border-left: solid 5px #181818;
+        h3 {
+            font-size: 2rem;
+
+        }
+        .read-status {
+            font-weight: bold;
+
+        }
+        .toggleRead, .removeBtn {
+            background-color: #181818 ;
+            color: #faf8f6;
+            border-radius: 15px;
+            padding: 5px;
+        }
+        
+        .toggleRead:active, .removeBtn:active {
+            background-color: #181818c6;
+
+        }
+    }
+
+    .bookCard-author {
+        font-style: italic ;
+        font-size: 1.25rem;
+    }
+}
+
+.button-field {
+    padding: 20px;
+    background-color: #faf8f6;
+    text-align: center;
+
+}
+dialog[open] {
+    form {
+        display: flex;
+        flex-direction: column;
+        /* display: grid;
+        color: var(--accent-color);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr); */
+        justify-items: stretch;
+        gap: 1rem;
+    }
+    .submit-btn{
+        grid-column: 1/3;
+        background-color: #181818;
+        color: #f4f2e9;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 15px;
+        font-size: 20px;
+
+    }
+    .submit-btn:active {
+        background-color: #1818188e ;
+    }
+    .form > label {
+        grid-column: 1/3;
+    }
+    #read {
+        grid-column: 1;
+    }
+    #not-read {
+        grid-column: 2;
+    }
+    .exit-btn {
+        margin-left: 400px;
+        #exit-btn {
+            font-size: 1.2rem;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            align-items: center;
+            border-radius: 10px;
+            border: 1px solid black;
+            background-color: hsl(0, 71%, 55%);
+            color: antiquewhite;
+        }
+
+        #exit-btn:active {
+            background-color: hsl(0, 71%, 65%);
+        }
+    }
+
+    input {
+        font-size: 1.25rem;
+        padding: 5px;
+    }
+    .radio-btn {
+        label {
+            margin: 10px;
+        }
+    }
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    border: none;
+    background-color: #f4f2e9;
+    margin: 50px;
+    border-radius: 30px;
+    padding: 30px;
+    margin: 255px 120px;
+    gap: 20px;
+}
+
+#add-button {
+    background-color: #181818;
+    color: #f4f2e9;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+
+}
+

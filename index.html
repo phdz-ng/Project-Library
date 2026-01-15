@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>My Reading Records</h1>
+    </header>
+    <main>
+        <div class="button-field">
+            <button id="add-button">New book</button>
+        </div>
+        <div class="container">
+
+        </div>
+        <dialog id="dialog">
+            <form id="form" action="#">
+                <div class="exit-btn">
+                    <button id="exit-btn" autofocus>x</button>
+                </div>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Title" required="">
+                
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" placeholder="Author" required="">
+                
+                <label for="pages">Number of pages:</label>
+                <input type="number" id="pages" name="pages" placeholder="Number of Pages" required="">
+            
+                
+                <div class="radio-btn">
+                    
+                    <label for="read"><input type="radio" id="read" name="readStatus" value="true">
+                        I have read this book</label>
+
+                </div>
+
+                <button type="submit" class="submit-btn">Add Book</button>
+            </form>
+        </dialog>
+        
+    </main>
+
+    <script src='main.js'></script>
+    
+</body>
+</html>
