@@ -121,7 +121,15 @@ dialog[open] {
     input {
         font-size: 1.25rem;
         padding: 5px;
+
     }
+    input:invalid {
+        border: 2px solid red;
+      }
+      
+    input:valid {
+        border: 2px solid green;
+      }
     .radio-btn {
         label {
             margin: 10px;

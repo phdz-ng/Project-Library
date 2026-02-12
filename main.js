@@ -102,3 +102,42 @@ submitBtn.addEventListener('click', (e) => {
     addNewForm.close();
     form.reset();
 })
+
+
+//--Form Validation--//
+
+const pagesInput = document.getElementById("pages");
+const titleInput = document.getElementById("title");
+const authorInput = document.getElementById("author");
+
+
+pagesInput.addEventListener ("input", () => {
+    if (pagesInput.validity.valueMissing) {
+        pagesInput.setCustomValidity("Please enter a number for Pages");
+    } else if (pagesInput.validity.rangeUnderflow) {
+        pagesInput.setCustomValidity("Pages must be at least 1");
+    } else if (pagesInput.validity.rangeOverflow) {
+        pagesInput.setCustomValidity("Pages cannot exceed 10000");
+    } else {
+        pagesInput.setCustomValidity("");
+    }
+    pagesInput.reportValidity();
+});
+
+titleInput.addEventListener("input", () => {
+    if (titleInput.validity.valueMissing) {
+        titleInput.setCustomValidity("Please enter a title");
+    } else {
+        titleInput.setCustomValidity("");
+    }
+    titleInput.reportValidity();
+})
+
+authorInput.addEventListener("input", () => {
+    if (authorInput.validity.valueMissing) {
+        authorInput.setCustomValidity("Please enter a name for author");
+    } else {
+        authorInput.setCustomValidity("");
+    }
+    authorInput.reportValidity();
+})
